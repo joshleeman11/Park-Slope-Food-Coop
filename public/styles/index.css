@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    text-align: center;
+}
+
+.text {
+    text-align: center;
+    max-width: 400px;
+    margin: auto;
+    padding: 5%;
+}
+header {
+    position: fixed; /* Ensure header is fixed */
+    top: 0;
+    width: 100%; /* Ensure full width */
+    z-index: 1000; /* Ensure it's on top of other content */
+}
+
+#nav-container {
+    display: flex;
+    justify-content: space-evenly; /* Evenly space items horizontally */
+    align-items: center; /* Center items vertically */
+    width: 100%;
+    max-width: 400px; /* Adjust the max-width as needed */
+}
+nav {
+    background-color: #f6f1f1; /* Background color for visibility */
+    padding: 1rem;
+    display: flex;
+    justify-content: space-evenly; /* Evenly space items horizontally */
+    align-items: center; /* Center items vertically */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Optional shadow for depth */
+    width: 100vw; /* Ensure full viewport width */
+}
+
+nav a {
+    color: rgb(7, 7, 7);
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 0; /* Reduced padding */
+    font-weight: 600;
+}
+
+main {
+    max-width: 400px; /* Constrain the main content width */
+    margin: auto; /* Center content horizontally */
+    padding-top: 5rem; /* Add padding top to account for fixed header */
+}
+
+.follow-us {
+    position: fixed;
+    width: 100px;
+    right: 30px; /* Adjust as needed */
+    z-index: 1000; /* Ensure it's on top of other content */
+}
+
+body.with-navbar .follow-us {
+    top: 60px; /* Adjust for when navbar is present */
+}
+
+body.no-navbar .follow-us {
+    top: 30px; /* Adjust for when navbar is absent */
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 60px;
+}
+
+img {
+    width: 150px; /* width of logo*/
+}
+
+.q-and-a {
+    display: flex;
+    justify-content: space-between; /* Space between question and + icon */
+    align-items: center;
+    padding: 0.5rem;
+}
+
+.q {
+    font-size: 1.3rem;
+    text-align: center;
+    flex-grow: 1;
+    font-weight: 600;
+}
+
+.faq .q-and-a:hover {
+    cursor: pointer;
+}
+
+.faq .a {
+    display: block;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+    padding: 0 0.5rem;
+    text-align: center;
+}
+
+@keyframes slideRight {
+    0% {
+        padding-left: 20px;
+    }
+    20% {
+        padding-left: calc(2rem);
+    }
+}
+
+.faq .a.show {
+    max-height: 500px; /* a value large enough to contain the content */
+    padding: 0.5rem;
+    text-align: center;
+}

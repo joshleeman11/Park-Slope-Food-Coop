@@ -1,0 +1,15 @@
+#follow-us {
+    position: fixed;
+    width: 100px;
+    right: 15px; /* Adjust as needed */
+    z-index: 1000; /* Ensure it's on top of other content */
+}
+
+.with-navbar #follow-us {
+    top: 60px; /* Adjust to be below the navbar */
+}
+
+.no-navbar #follow-us {
+    top: 0px; /* Adjust to be higher */
+}
+

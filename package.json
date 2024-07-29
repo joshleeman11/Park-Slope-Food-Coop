@@ -1,0 +1,19 @@
+{
+  "name": "park-slope-food-coop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "coop.js",
+  "scripts": {
+    "start": "node coop.js",
+    "sync": "aws s3 sync . s3://ps-coop --exclude 'node_modules/*' --exclude 'node_modules/**' --exclude 'package.json' --exclude 'package-lock.json' --exclude '.gitignore' --exclude 'README.md'",
+    "invalidate": "aws cloudfront create-invalidation --distribution-id E3HFMNFKLQFB7C --paths '/*'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.19.2"
+  }
+}

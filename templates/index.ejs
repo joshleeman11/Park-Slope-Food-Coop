@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Coop4Unity</title>
+        <link rel="stylesheet" href="/styles/index.css" />
+    </head>
+    <body class="with-navbar">
+        <%- include('partials/navbar') %>
+        <%- include('partials/follow-us') %>
+        <main>
+            <img src="/images/SaveOurCoopPinFinal2inch.jpg" alt="Logo" />
+            <h1 id="about">WHAT WE'RE ABOUT</h1>
+            <h4>Independence from BDS</h4>
+            <p>
+                The BDS strategy is to infiltrate any organization or community
+                space and push them to adopt the BDS agenda. We seek to maintain
+                the Coop's independence from such an un-cooperative group.
+                <a href="/independence"
+                    ><strong>Read more about BDS.</strong></a
+                >
+            </p>
+            <h4>In-person Meetings</h4>
+            <p>
+                In person meetings encourage paying attention to what could be a
+                many-sided debate for an upcoming vote that evening. It affords
+                the opportunity to hear something, meet someone, see something
+                new one wouldn't see if they Zoomed in and saw only what the
+                video camera revealed. If someone simply logs in through video,
+                votes at the required time, and then logs out, this is
+                undermining our cooperative spirit. Online voting is being
+                suggested by those who want to manipulate, not encourage,
+                democracy. Finally, during COVID when we did have voting online,
+                the attendance rarely cracked 100, contradicting the argument
+                that people are too busy to attend an in-person meeting.
+            </p>
+            <h4>Returning to the Co-op's Mission</h4>
+            <p>
+                The Coop is a neighborhood grocery store, albeit a special one.
+                It is not a non-profit, it is not a political action committee,
+                and it is not a social justice organization. It is a business
+                that has to be carefully managed to remain fiscally healthy. The
+                financial success of the Coop depends on the goodwill of the
+                membership. Imposing a political action that is not directly
+                related to the welfare of the store is not in the Coop's
+                business interest, especially when a large portion of the
+                membership is deeply offended by it. Help us protect the Coop's
+                finances by preserving its original peaceful and inclusive
+                nature without divisive politics.
+                <a href="/mission"
+                    ><strong
+                        >Read more about the Coop's mission and
+                        business.</strong
+                    ></a
+                >
+            </p>
+            <h1 id="faq">FAQ</h1>
+            <div class="faq">
+                <div class="q-and-a">
+                    <div class="q">What is the 75% boycott threshold?</div>
+                    <div>+</div>
+                </div>
+                <div class="a">
+                    At present, PSFC requires at least 75% of the in-person
+                    voting attendees to vote YES for the boycott. As it was so
+                    powerfully demonstrated when this rule was passed, PSFC
+                    speaks as close as we can with one voice when setting this
+                    minimum. ALL boycotts in PSFC history have passed with at
+                    least 85% at YES, so a 75% minimum is actually lowering the
+                    standard. The Boycott Divestment and Sanctions movement are
+                    proven liars who want a return to the once merely
+                    traditional 51% majority knowing that in our Trumpian age,
+                    any perversion of the truth to get the ball over the 51-yard
+                    line is welcome. There are those in BDS who want the minimum
+                    to be 30% and called for this obvious ploy at the General
+                    Meeting many years ago. <br /><br />
+                    Never forget: the goal of telling so many lies is not to
+                    establish the lie. &nbsp;The goal is for you to disbelieve
+                    <strong>everything</strong> you are told.
+                </div>
+            </div>
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    document
+                        .querySelectorAll(".faq .q-and-a")
+                        .forEach((element) => {
+                            element.addEventListener("click", () => {
+                                const currentlyVisible =
+                                    document.querySelector(".faq .a.show");
+                                const answer = element.nextElementSibling;
+
+                                if (
+                                    currentlyVisible &&
+                                    currentlyVisible !== answer
+                                ) {
+                                    currentlyVisible.classList.remove("show");
+                                }
+
+                                answer.classList.toggle("show");
+                            });
+                        });
+                });
+            </script>
+        </main>
+    </body>
+</html>
