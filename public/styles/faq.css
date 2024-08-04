@@ -1,0 +1,77 @@
+/* CSS Reset */
+* {
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0%;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    text-align: center;
+    background-color: #f6f1f1;
+}
+
+.q-and-a hr {
+    width: 90%; /* Adjust the width as needed */
+    margin: 1rem 0; /* Space above and below */
+    border: none; /* Remove default border */
+    border-top: 1px solid black; /* Customize as needed */
+}
+
+.q-and-a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+.question-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%; /* Same width as the hr */
+}
+
+.q {
+    font-size: 3.0rem;
+    text-align: center;
+    flex-grow: 1;
+    font-weight: 600;
+}
+
+.faq .q-and-a:hover {
+    cursor: pointer;
+}
+
+.faq .a {
+    display: block;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+    padding: 0 0.5rem;
+    text-align: center;
+    margin-inline: 5%;
+    font-size: 3.0rem;
+}
+
+@keyframes slideRight {
+    0% {
+        padding-left: 20px;
+    }
+    20% {
+        padding-left: calc(2rem);
+    }
+}
+
+.faq .a.show {
+    max-height: 2000px; /* a value large enough to contain the content */
+    padding: 0.5rem;
+    text-align: center;
+    max-width: 1000px; /* Optional: limit max width to match question-container */
+    margin-inline: 5%;
+    font-size: 3.0rem;
+}
+
+.icon {
+    font-size: 3.0rem;
+}

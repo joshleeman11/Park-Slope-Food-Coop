@@ -16,8 +16,12 @@ app.get("/mission", (req, res) => {
     res.render("mission");
 });
 
-app.get("/independence", (req, res) => {
-    res.render("independence");
+app.get("/fullVersions", (req, res) => {
+    res.render("fullVersions");
+});
+
+app.get("/faq", (req, res) => {
+    res.render("faq");
 });
 
 app.listen(3000)
