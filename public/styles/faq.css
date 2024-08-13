@@ -54,6 +54,19 @@ body {
     font-size: 3.0rem;
 }
 
+.faq .a.show {
+    max-height: 2000px; /* a value large enough to contain the content */
+    padding: 0 0.5rem;
+    text-align: center;
+    max-width: 1000px; /* Optional: limit max width to match question-container */
+    margin-inline: 5%;
+    font-size: 3.0rem;
+}
+
+.icon {
+    font-size: 3.0rem;
+}    
+
 @keyframes slideRight {
     0% {
         padding-left: 20px;
@@ -63,15 +76,36 @@ body {
     }
 }
 
-.faq .a.show {
-    max-height: 2000px; /* a value large enough to contain the content */
-    padding: 0.5rem;
-    text-align: center;
-    max-width: 1000px; /* Optional: limit max width to match question-container */
-    margin-inline: 5%;
-    font-size: 3.0rem;
+@media screen and (max-width: 700px) {
+    .q {
+        font-size: 3.0rem;
+        text-align: center;
+        flex-grow: 1;
+        font-weight: 600;
+    }
+
+    .faq .a {
+        display: block;
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+        padding: 0 0.5rem;
+        text-align: center;
+        margin-inline: 5%;
+        font-size: 3.0rem;
+    }
+
+    .faq .a.show {
+        max-height: 2000px; /* a value large enough to contain the content */
+        padding: 0 0.5rem;
+        text-align: center;
+        max-width: 1000px; /* Optional: limit max width to match question-container */
+        margin-inline: 5%;
+        font-size: 3.0rem;
+    }
+    
+    .icon {
+        font-size: 3.0rem;
+    }    
 }
 
-.icon {
-    font-size: 3.0rem;
-}

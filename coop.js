@@ -12,17 +12,13 @@ app.get("/", (req, res) => {
     res.render("index");
 });
 
-app.get("/mission", (req, res) => {
-    res.render("mission");
-});
-
 app.get("/fullVersions", (req, res) => {
     res.render("fullVersions");
 });
 
-app.get("/faq", (req, res) => {
-    res.render("faq");
-});
+// app.get("/faq", (req, res) => {
+//     res.render("faq");
+// });
 
 app.listen(3000)
 console.log(`Web server started and running at http://localhost:3000`);
