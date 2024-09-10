@@ -20,17 +20,22 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.7); /* Semi-transparent white overlay for lighter effect */
+    background: rgba(
+        255,
+        255,
+        255,
+        0.7
+    ); /* Semi-transparent white overlay for lighter effect */
     z-index: 1; /* Place overlay behind the content */
 }
 
-#who-we-are p, h1 {
+#who-we-are p,
+h1 {
     position: relative; /* Ensure the text is on top of the overlay */
     font-weight: bold;
     font-size: 30px;
     z-index: 2; /* Ensure text is above the overlay */
 }
-
 
 h1 {
     font-size: 50px;
@@ -104,6 +109,23 @@ html {
 
 img {
     width: 80px; /* width of logo*/
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    padding-bottom: 2%;
+}
+
+.contact img {
+    width: 50px;
+    transition: transform 0.3s ease;
+}
+
+.contact a:hover img {
+    transform: scale(0.95);
 }
 
 @media screen and (max-width: 1150px) {
